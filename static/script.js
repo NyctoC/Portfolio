@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.height = window.innerHeight;
 
     let rocketImg = new Image();
-
+    
     function reportWindowSize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rocket.angle = Math.atan2(rocket.dy, rocket.dx);
 
         // Keep inside canvas
-        if (rocket.x < 0) rocket.dx = canvas.width;
+        if (rocket.x < 0) rocket.x = canvas.width;
         if (rocket.x > canvas.width) rocket.x = 0;
         if (rocket.y < 0) rocket.y = canvas.height;
         if (rocket.y > canvas.height) rocket.y = 0;
