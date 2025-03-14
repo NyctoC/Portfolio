@@ -68,17 +68,29 @@ nav a:hover {
 }
 
 .intro p {
-    font-size: 24px;
+    font-size: 22px;
     color: #D1D1E9;
     max-width: 600px;
 }
 
 .intro h1 {
-    font-size: 64px;
     margin: 0;
     color: #8F00FF;
     position: relative;
     display: inline-block;
+    font-size: 5vw;
+
+}
+@media (max-width: 1024px) { /* Tablets */
+    .intro h1 {
+        font-size: 6vw;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .intro h1 {
+        font-size: 9vw;
+    }
 }
 
 .intro h1 .highlight {
@@ -94,11 +106,23 @@ nav a:hover {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: 1.35vw;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
     margin-top: 20px;
+}
+
+@media (max-width: 1024px) { /* Tablets */
+    .hire-me {
+        font-size: 3.35vw;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .hire-me {
+        font-size: 5.35vw;
+    }
 }
 
 .hire-me:hover {
