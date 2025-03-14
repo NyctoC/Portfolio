@@ -34,6 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.height = window.innerHeight;
 
     let rocketImg = new Image();
+
+    function reportWindowSize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.onresize = reportWindowSize;
+
     rocketImg.src = "../static/Images/Rocket.png"; // Adjust path if needed
 
     let angle = 0;
