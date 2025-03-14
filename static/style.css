@@ -25,7 +25,7 @@ header {
 header .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #3F9E6C;
+    color: #7cdaa8;
 }
 
 /* Language Selector */
@@ -44,7 +44,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #F87060;
+    color: #e95242;
     font-weight: bold;
     padding: 5px 10px;
     border: 2px solid transparent;
@@ -53,7 +53,7 @@ nav a {
 
 nav a:hover {
     color: #10101A;
-    background: #F87060;
+    background: #e95242;
     border-radius: 5px;
 }
 
@@ -75,7 +75,7 @@ nav a:hover {
 
 .intro h1 {
     margin: 0;
-    color: #3F9E6C;
+    color: #7cdaa8;
     position: relative;
     display: inline-block;
     font-size: 5vw;
@@ -94,14 +94,14 @@ nav a:hover {
 }
 
 .intro h1 .highlight {
-    color: #F87060;
+    color: #e95242;
     position: relative;
     display: inline-block;
 }
 
 /* Hire Btn */
 .hire-me {
-    background-color: #3F9E6C;
+    background-color: #7cdaa8;
     color: #10101A;
     padding: 10px 20px;
     border: none;
@@ -126,7 +126,7 @@ nav a:hover {
 }
 
 .hire-me:hover {
-    background-color: #F87060;
+    background-color: #e95242;
     color: #10101A;
     transform: scale(1.1);
 }
@@ -147,7 +147,7 @@ nav a:hover {
 
 .projects h2 {
     font-size: 40px;
-    color: #F87060;
+    color: #e95242;
 }
 
 .project-grid {
@@ -157,7 +157,7 @@ nav a:hover {
 }
 
 .project-card {
-    background: #3F9E6C;
+    background: #7cdaa8;
     color: #10101A;
     padding: 20px;
     width: 150px;
@@ -172,7 +172,7 @@ nav a:hover {
 
 .project-card:hover {
     transform: scale(1.1);
-    background: #F87060;
+    background: #e95242;
 }
 
 /* Scroll Unlock */
