@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.height = window.innerHeight;
 
     let rocketImg = new Image();
-    rocketImg.src = "../static/Rocket.png"; // Adjust path if needed
+    rocketImg.src = "../static/Images/Rocket.png"; // Adjust path if needed
 
     let angle = 0;
     let lastTime = performance.now(); // Track last frame time
