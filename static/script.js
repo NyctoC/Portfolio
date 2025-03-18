@@ -41,10 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.height = window.innerHeight;
 
     let rocketImg = new Image();
-    
+    let rocketResponsiveFactor = 0.7 + (canvas.width / 6000);
+
     function reportWindowSize() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+        rocketResponsiveFactor = 0.8 + (canvas.width / 10000);
     }
 
     window.onresize = reportWindowSize;
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.save();
         ctx.translate(rocket.x, rocket.y);
         ctx.rotate(rocket.angle + Math.PI / 2);
-        ctx.drawImage(rocketImg, -rocket.size / 2, -rocket.size / 2, rocket.size, rocket.size);
+        ctx.drawImage(rocketImg, -rocket.size / 2 * rocketResponsiveFactor, -rocket.size / 2 * rocketResponsiveFactor, rocket.size * rocketResponsiveFactor, rocket.size * rocketResponsiveFactor);
         ctx.restore();
     }
 
@@ -77,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
         rocket.trail.forEach(pos => {
             ctx.beginPath();
-            ctx.arc(pos.x, pos.y, 3.75, 0, Math.PI * 2);
+            ctx.arc(pos.x, pos.y, 3.75 * rocketResponsiveFactor, 0, Math.PI * 2);
             ctx.fill();
         });
     }
@@ -87,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateRocket(deltaTime) {
+        rocketSize = canvas.width / 15;
+
         angle += getRandom(0, 0.006);
 
         let distance = (rocket.speed * deltaTime) / 1000; // Scale movement by time
