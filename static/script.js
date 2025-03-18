@@ -124,4 +124,73 @@ document.addEventListener("DOMContentLoaded", function () {
 
     rocketImg.onload = () => requestAnimationFrame(animate);
 
+    const canvas2 = document.getElementById("starsCanvas");
+    const ctx2 = canvas2.getContext("2d");
+
+    function resizeCanvas() {
+        canvas2.width = window.innerWidth;
+        canvas2.height = document.querySelector(".intro").offsetHeight;
+        generateStars(); 
+    }
+
+    let stars = [];
+    const numStars = 80;
+
+    function generateStars() {
+        stars = [];
+        for (let i = 0; i < numStars; i++) {
+            stars.push({
+                x: Math.random() * canvas2.width,
+                y: Math.random() * canvas2.height,
+                baseX: 0, // Posición base para oscilación
+                baseY: 0, 
+                radius: Math.random() * 2 + 1,
+                opacity: Math.random() * 0.8 + 0.2,
+                speed: Math.random() * 0.2 + 0.05, // Velocidad sutil de movimiento
+                angle: Math.random() * Math.PI * 2 // Ángulo de oscilación inicial
+            });
+        }
+    }
+
+    let mouseX = 0, mouseY = 0;
+
+    function drawStars() {
+        ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+        ctx2.fillStyle = "white";
+        stars.forEach(star => {
+            star.angle += star.speed * 0.1; // Movimiento lento
+            star.baseX = Math.cos(star.angle) * 2; // Oscilación horizontal
+            star.baseY = Math.sin(star.angle) * 2; // Oscilación vertical
+
+            let parallaxX = ((mouseX * 0.12) - window.innerWidth / 2) * (star.radius * 0.02);
+            let parallaxY = ((mouseY * 0.12) - window.innerHeight / 2) * (star.radius * 0.02);
+
+            ctx2.globalAlpha = star.opacity;
+            ctx2.beginPath();
+            ctx2.arc(
+                star.x + star.baseX + parallaxX, 
+                star.y + star.baseY + parallaxY, 
+                star.radius, 
+                0, 
+                Math.PI * 2
+            );
+            ctx2.fill();
+            ctx2.closePath();
+        });
+    }
+
+    function animateStars() {
+        drawStars();
+        requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    resizeCanvas();
+    animateStars();
+    window.addEventListener("resize", resizeCanvas);
+
 });
