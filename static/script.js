@@ -20,7 +20,7 @@ function openPopup(id) {
         // Delay scrolling slightly to ensure the popup is fully rendered
         setTimeout(() => {
             popupContent.scrollIntoView({ behavior: "smooth", block: "center" });
-        }, 100);
+        }, 500);
     }
 }
 
