@@ -422,11 +422,13 @@ body.scrolling .projects {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    border: 4px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     margin-bottom: 0px;
     margin-top: 5px;
+    margin-left: -10px;
+    padding: 10px;
 }
 
 .about-me-photo:hover {
@@ -463,6 +465,7 @@ body.scrolling .projects {
     .about-me-photo {
         margin-bottom: 0;
         margin-right: 0px;
+        margin-left: 0px;
     }
 
     .about-me-text {
@@ -482,6 +485,7 @@ body.scrolling .projects {
         height: 150px;
         margin-top: 20px;
         margin-bottom: -20px;
+        margin-left: 0px;
     }
 
     .about-me-text {
