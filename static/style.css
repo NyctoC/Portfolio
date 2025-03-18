@@ -320,7 +320,7 @@ nav a:hover {
 
 .project-icons a.disabled {
     pointer-events: none; /* Prevents clicking */
-    opacity: 0.4; /* Makes it visually disabled */
+    opacity: 0.2; /* Makes it visually disabled */
     cursor: not-allowed; /* Shows disabled cursor */
 }
 
