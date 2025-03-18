@@ -1,7 +1,9 @@
 /* Disable scrolling initially */
-html, body {
+html,
+body {
     overflow: hidden;
     background-color: #10101A;
+    background: rgba(16, 16, 15, 0.9);
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -17,16 +19,20 @@ body::after {
     left: 0;
     width: 100vw;
     height: 100vh;
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+    pointer-events: none;
+    /* Ensures it doesn't interfere with clicks */
     background: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.3) 130%);
-    z-index: 9999; /* Ensure it's on top */
+    z-index: 9999;
+    /* Ensure it's on top */
 }
 
 .separator {
-    width: 90%; /* Ajustable según el diseño */
+    width: 90%;
+    /* Ajustable según el diseño */
     height: 2px;
     background-color: #D1D1E9;
-    margin: 0 auto 20px auto; /* Solo margen inferior */
+    margin: 0 auto 20px auto;
+    /* Solo margen inferior */
     border-radius: 5px;
     opacity: 0.8;
     margin-top: 0px;
@@ -42,7 +48,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 0;
-    background: rgba(16, 16, 26, 0.9);
+    background: rgba(16, 16, 15, 0);
 }
 
 header .logo {
@@ -110,13 +116,18 @@ nav a:hover {
     z-index: 1;
 
 }
-@media (max-width: 1024px) { /* Tablets */
+
+@media (max-width: 1024px) {
+
+    /* Tablets */
     .intro h1 {
         font-size: 6vw;
     }
 }
 
-@media (max-width: 768px) { /* Mobile */
+@media (max-width: 768px) {
+
+    /* Mobile */
     .intro h1 {
         font-size: 9vw;
     }
@@ -143,13 +154,17 @@ nav a:hover {
     z-index: 1;
 }
 
-@media (max-width: 1024px) { /* Tablets */
+@media (max-width: 1024px) {
+
+    /* Tablets */
     .hire-me {
         font-size: 3.35vw;
     }
 }
 
-@media (max-width: 768px) { /* Mobile */
+@media (max-width: 768px) {
+
+    /* Mobile */
     .hire-me {
         font-size: 5.35vw;
     }
@@ -164,38 +179,22 @@ nav a:hover {
 /* Projects Section */
 .projects {
     min-height: 100vh;
-    background: #10101A;
-    padding: 0px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    transform: translateY(100%);
-    transition: transform 0.8s ease-in-out;
-}
-
-.projects h2 {
-    font-size: 40px;
-    color: #e95242;
-}
-
-/* Projects Section */
-.projects {
-    min-height: 100vh;
-    background: #10101A;
+    background: #10101a00;
     padding: 60px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-top: 2px solid rgba(124, 218, 168, 0.4);
 }
+
 
 /* Title Styling */
 .projects h2 {
     font-size: 42px;
-    color: #FFFFFF; /* Color vibrante para destacar */
+    color: #FFFFFF;
+    /* Color vibrante para destacar */
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -212,7 +211,8 @@ nav a:hover {
 /* Project Cards */
 .project-card {
     position: relative;
-    background: rgba(124, 218, 168, 0.1); /* Fondo translúcido */
+    background: rgba(124, 218, 168, 0.1);
+    /* Fondo translúcido */
     border: 2px solid rgba(124, 218, 168, 0.4);
     backdrop-filter: blur(10px);
     color: #fff;
@@ -228,29 +228,38 @@ nav a:hover {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 480px) { /* Para teléfonos realmente angostos */
+@media (max-width: 480px) {
+
+    /* Para teléfonos realmente angostos */
     .project-grid {
-        grid-template-columns: minmax(0, 1fr); /* Asegura que las tarjetas se reduzcan bien */
-        gap: 20px; /* Reduce el espacio entre ellas */
+        grid-template-columns: minmax(0, 1fr);
+        /* Asegura que las tarjetas se reduzcan bien */
+        gap: 20px;
+        /* Reduce el espacio entre ellas */
     }
 
     .project-card {
-        height: 180px; /* Reduce la altura en pantallas muy pequeñas */
-        font-size: 14px; /* Ajusta el tamaño del texto */
+        height: 180px;
+        /* Reduce la altura en pantallas muy pequeñas */
+        font-size: 14px;
+        /* Ajusta el tamaño del texto */
         padding: 5px;
     }
 
     .project-title {
-        font-size: 16px; /* Reduce el tamaño del título */
+        font-size: 16px;
+        /* Reduce el tamaño del título */
         top: 65%;
     }
 
     .project-tech {
-        font-size: 12px; /* Hace más compacto el texto */
+        font-size: 12px;
+        /* Hace más compacto el texto */
     }
 
     .project-icons img {
-        width: 18px; /* Reduce los íconos para evitar que ocupen mucho espacio */
+        width: 18px;
+        /* Reduce los íconos para evitar que ocupen mucho espacio */
         height: 18px;
     }
 }
@@ -287,10 +296,12 @@ nav a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0; /* Hidden by default */
+    opacity: 0;
+    /* Hidden by default */
     transition: opacity 0.5s ease-in-out;
     pointer-events: none;
-    background-image: var(--bg-image); /* Dynamically set */
+    background-image: var(--bg-image);
+    /* Dynamically set */
 }
 
 .project-card:hover::before {
@@ -319,9 +330,12 @@ nav a:hover {
 }
 
 .project-icons a.disabled {
-    pointer-events: none; /* Prevents clicking */
-    opacity: 0.2; /* Makes it visually disabled */
-    cursor: not-allowed; /* Shows disabled cursor */
+    pointer-events: none;
+    /* Prevents clicking */
+    opacity: 0.2;
+    /* Makes it visually disabled */
+    cursor: not-allowed;
+    /* Shows disabled cursor */
 }
 
 /* Top-Left Badge */
@@ -380,57 +394,129 @@ body.scrolling .projects {
     transform: translateY(0);
 }
 
-/* About me */
+/* About Me - Responsive Design */
 
 .about-me-card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 30px;
+    width: 90%;
+    max-width: 1000px;
     text-align: center;
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-out;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-me-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
+/* Image Styling */
 .about-me-photo {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .about-me-photo:hover {
     transform: scale(1.05);
 }
 
+/* Text Content */
 .about-me-text {
-    max-width: 700px;
-    text-align: left;
+    max-width: 600px;
+    text-align: center;
 }
 
+/* Headings & Paragraphs */
 .about-me-text h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
     color: #ffffff;
 }
 
 .about-me-text p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.85);
 }
+
+/* Make it a row on larger screens */
+@media (min-width: 768px) {
+    .about-me-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .about-me-photo {
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .about-me-text {
+        text-align: left;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-me-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-me-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-me-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me-card {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .about-me-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-me-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-me-text p {
+        font-size: 0.9rem;
+    }
+}
+
 
 /* Smooth fade-in effect */
 @keyframes fadeIn {
@@ -438,6 +524,7 @@ body.scrolling .projects {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -446,12 +533,14 @@ body.scrolling .projects {
 
 /* Popup Background */
 .project-popup {
-    position: fixed; /* Ensure it's relative to the viewport */
+    position: fixed;
+    /* Ensure it's relative to the viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark overlay */
     backdrop-filter: blur(8px);
     display: none;
     align-items: center;
@@ -471,7 +560,8 @@ body.scrolling .projects {
     backdrop-filter: blur(12px);
     color: #fff;
     padding: 20px;
-    width: 90%; /* Ensures responsiveness */
+    width: 90%;
+    /* Ensures responsiveness */
     max-width: 500px;
     min-width: none;
     text-align: center;
@@ -483,14 +573,18 @@ body.scrolling .projects {
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .popup-content {
-        width: 80%;  /* Make it smaller */
-        max-width: 300px; /* Reduce max width */
+        width: 80%;
+        /* Make it smaller */
+        max-width: 300px;
+        /* Reduce max width */
         padding: 15px;
-        font-size: 14px; /* Reduce text size */
+        font-size: 14px;
+        /* Reduce text size */
     }
-    
+
     .close-btn {
-        font-size: 20px; /* Adjust close button size */
+        font-size: 20px;
+        /* Adjust close button size */
         top: 8px;
         right: 12px;
     }
@@ -521,9 +615,104 @@ body.scrolling .projects {
 
 /* Fade In Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* Footer */
+
+.footer-section {
+    background: rgba(16, 16, 15, 0.9);
+    border-top: 2px solid rgba(124, 218, 168, 0.4);
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 16px;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-info h2 {
+    font-size: 24px;
+    color: #7cdaa8;
+}
+
+.footer-info p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-socials a {
+    color: #7cdaa8;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-socials a:hover {
+    color: #50b48b;
+    transform: scale(1.1);
+}
+
+.footer-emails p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-emails a {
+    color: #7cdaa8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-emails a:hover {
+    text-decoration: underline;
+}
+
+.footer-trademark {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 720px) {
+    .gradient {
+        --size: 500px;
+    }
+}
+
+/* This is just to transition when you change the viewport size. */
+* {
+    transition: all 0.5s ease-out;
+}
+
 
 #starsCanvas {
     position: absolute;
@@ -532,7 +721,8 @@ body.scrolling .projects {
     width: 100%;
     height: 100%;
     z-index: 0;
-    pointer-events: none; /* No bloquea interacciones */
+    pointer-events: none;
+    /* No bloquea interacciones */
 }
 
 #rocketCanvas {
