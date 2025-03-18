@@ -1,3 +1,34 @@
+// Pop ups
+function openPopup(id) {
+    const popup = document.getElementById(id);
+
+    if (!popup) return;
+
+    popup.style.display = "flex";
+
+    // Prevent scrolling while popup is open
+    document.body.style.overflow = "hidden";
+
+    // Get the .popup-content class inside popup
+    const popupContent = popup.querySelector(".popup-content");
+    // move window to look at popupContent
+    popupContent.scrollIntoView({ behavior: "smooth" });
+    // Add popupcontent margin top so it moves a little from the top after scrollingIntoView
+    popupContent.style.marginTop = "15vh";
+}
+
+// Close the popup and restore scrolling
+function closePopup(id) {
+    const popup = document.getElementById(id);
+
+    if (!popup) return;
+
+    popup.style.display = "none";
+
+    // Allow scrolling again
+    document.body.style.overflow = "";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const viewProjectsBtn = document.getElementById("view-projects");
     const projectsSection = document.getElementById("projects");
@@ -32,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
     // ROCKET
     const canvas = document.getElementById("rocketCanvas");
     const ctx = canvas.getContext("2d");
@@ -47,6 +77,14 @@ document.addEventListener("DOMContentLoaded", function () {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
         rocketResponsiveFactor = 0.8 + (canvas.width / 10000);
+
+        const popups = document.querySelectorAll(".project-popup");
+        popups.forEach(popup => {
+            if (popup.style.display === "flex") {
+                popup.style.alignItems = "center";
+                popup.style.justifyContent = "center";
+            }
+        });
     }
 
     window.onresize = reportWindowSize;
@@ -134,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function resizeCanvas() {
         canvas2.width = window.innerWidth;
         canvas2.height = document.querySelector(".intro").offsetHeight;
-        generateStars(); 
+        generateStars();
     }
 
     let stars = [];
@@ -142,14 +180,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateStars() {
         let numStars = Math.floor((canvas2.width * canvas2.height) / 15500);
-        console.log(numStars);
         stars = [];
         for (let i = 0; i < numStars; i++) {
             stars.push({
                 x: Math.random() * canvas2.width,
                 y: Math.random() * canvas2.height,
                 baseX: 0, // Posición base para oscilación
-                baseY: 0, 
+                baseY: 0,
                 radius: Math.random() * 2 + 1,
                 opacity: Math.random() * 0.8 + 0.2,
                 speed: Math.random() * 0.2 + 0.05, // Velocidad sutil de movimiento
@@ -174,10 +211,10 @@ document.addEventListener("DOMContentLoaded", function () {
             ctx2.globalAlpha = star.opacity;
             ctx2.beginPath();
             ctx2.arc(
-                star.x + star.baseX + parallaxX, 
-                star.y + star.baseY + parallaxY, 
-                star.radius, 
-                0, 
+                star.x + star.baseX + parallaxX,
+                star.y + star.baseY + parallaxY,
+                star.radius,
+                0,
                 Math.PI * 2
             );
             ctx2.fill();
