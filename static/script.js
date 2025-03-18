@@ -10,11 +10,11 @@ function openPopup(id) {
     document.body.style.overflow = "hidden";
 
     // Get the .popup-content class inside popup
-    const popupContent = popup.querySelector(".popup-content");
+    const popupContent = popup.querySelector(".close-btn");
     // move window to look at popupContent
     popupContent.scrollIntoView({ behavior: "smooth" });
     // Add popupcontent margin top so it moves a little from the top after scrollingIntoView
-    //popupContent.style.marginTop = "10vh";
+    //popup.querySelector("popup-content").style.marginTop = "100px";
 }
 
 // Close the popup and restore scrolling
