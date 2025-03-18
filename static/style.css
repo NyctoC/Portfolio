@@ -425,7 +425,8 @@ body.scrolling .projects {
     border: 3px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .about-me-photo:hover {
