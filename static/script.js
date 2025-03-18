@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const projectsSection = document.getElementById("projects");
     const body = document.body;
 
+    document.querySelectorAll(".project-card").forEach(card => {
+        const bgImage = card.getAttribute("data-bg");
+        if (bgImage) {
+            card.style.setProperty("--bg-image", `url('images/${bgImage}')`);
+        }
+    });
+
     if ('scrollRestoration' in window.history) {
         window.history.scrollRestoration = 'manual'
     }
