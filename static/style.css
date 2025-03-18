@@ -462,7 +462,7 @@ body.scrolling .projects {
 
     .about-me-photo {
         margin-bottom: 0;
-        margin-right: 20px;
+        margin-right: 0px;
     }
 
     .about-me-text {
@@ -480,6 +480,8 @@ body.scrolling .projects {
     .about-me-photo {
         width: 150px;
         height: 150px;
+        margin-top: 20px;
+        margin-bottom: -20px;
     }
 
     .about-me-text {
