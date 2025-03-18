@@ -1,20 +1,27 @@
 // Pop ups
 function openPopup(id) {
     const popup = document.getElementById(id);
-
     if (!popup) return;
 
     popup.style.display = "flex";
 
-    // Prevent scrolling while popup is open
+    // Prevent scrolling of the main content but allow scrolling inside the popup
+    document.documentElement.style.overflow = "hidden"; 
     document.body.style.overflow = "hidden";
 
-    // Get the .popup-content class inside popup
-    const popupContent = popup.querySelector(".close-btn");
-    // move window to look at popupContent
-    popupContent.scrollIntoView({ behavior: "smooth" });
-    // Add popupcontent margin top so it moves a little from the top after scrollingIntoView
-    //popup.querySelector("popup-content").style.marginTop = "100px";
+    // Get the first element inside the popup with .popup-content
+    const popupContent = popup.querySelector(".popup-content"); 
+
+    if (popupContent) {
+        // Ensure popup can be scrolled on mobile
+        popupContent.style.overflowY = "auto";  
+        popupContent.style.maxHeight = "90vh"; // Prevent it from being too large
+
+        // Delay scrolling slightly to ensure the popup is fully rendered
+        setTimeout(() => {
+            popupContent.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
+    }
 }
 
 // Close the popup and restore scrolling
