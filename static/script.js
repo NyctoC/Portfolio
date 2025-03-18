@@ -134,9 +134,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let stars = [];
-    const numStars = 80;
+    //const numStars = 100;
 
     function generateStars() {
+        let numStars = Math.floor((canvas2.width * canvas2.height) / 15500);
+        console.log(numStars);
         stars = [];
         for (let i = 0; i < numStars; i++) {
             stars.push({
