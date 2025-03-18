@@ -36,15 +36,14 @@
                 <img src="/static/Images/Cris.jpg" alt="Cristian's Photo" class="about-me-photo">
                 <div class="about-me-text">
                     <h2>About Me</h2>
+                    <div class="separator"></div>
                     <p>I'm a software developer with 4+ years of
-                        experience in AI, robotics, cybersecurity, electronics, videogames, and full-stack
-                        development,
+                        experience in AI, robotics, cybersecurity, electronics, videogames, and full-stack development,
                         specializing
                         in Unity3D, C++, C#, Python and Databases.
 
                         I've led projects from concept to launch, working on real-time AI, secure systems, software
-                        optimization, and data compression algorithms. Now, I'm focused on applying my expertise in
-                        AI,
+                        optimization, and data compression algorithms. Now, I'm focused on applying my expertise in AI,
                         cybersecurity, and robotics, combining software, security, and hardware integration to drive
                         innovation..</p>
                     <p>Check out some of my work below!</p>
@@ -54,7 +53,11 @@
 
         <!--<div class="separator"></div>-->
 
-        <h2>My Projects</h2>
+        <h2 class="projects-title">My Projects</h2>
+        <p class="projects-description">
+            A selection of my featured projects, showcasing innovation in AI, cybersecurity, game development, and full-stack solutions.
+        </p>
+
         <div class="project-grid"> <!-- ADD GRID WRAPPER -->
             <div class="project-card" data-bg="BringU.png">
                 <div class="project-badge" onclick="openPopup('bringU-popup')">
@@ -193,16 +196,12 @@
                 <span class="close-btn" onclick="closePopup('bringU-popup')">&times;</span>
                 <h2>Bring-U</h2>
                 <p>
-                    Bring-U is an independent web project built with Django, designed to enhance the student
-                    experience
+                    Bring-U is an independent web project built with Django, designed to enhance the student experience
                     on campus. It provides a platform for food deliveries from local restaurants and carpooling
                     services.
-                    My primary role in this project was developing a significant portion of the user interface and a
-                    AI
-                    capable of recognizing text from images. This AI would automatically format and generate
-                    complete
-                    menus from a single photo, making it easier for restaurants and customers to create menus or
-                    list
+                    My primary role in this project was developing a significant portion of the user interface and a AI
+                    capable of recognizing text from images. This AI would automatically format and generate complete
+                    menus from a single photo, making it easier for restaurants and customers to create menus or list
                     services without manually entering each item.
                 </p>
                 <img src="static/Images/BringU.png" alt="Bring-U" class="popup-img">
@@ -213,10 +212,8 @@
                 <span class="close-btn" onclick="closePopup('gravity-popup')">&times;</span>
                 <h2>Gravity</h2>
                 <p>
-                    An online clothing store built with Django, known for its modern design, strong visual appeal,
-                    and
-                    AI-powered outfit recommendations. The AI suggests outfits based on a simple prompt entered by
-                    the
+                    An online clothing store built with Django, known for its modern design, strong visual appeal, and
+                    AI-powered outfit recommendations. The AI suggests outfits based on a simple prompt entered by the
                     customer, tailoring suggestions to the occasion.
                     My role in this project involved developing the entire front-end and programming the AI system,
                     which operates using the OpenAI API.
@@ -229,12 +226,10 @@
                 <span class="close-btn" onclick="closePopup('sasa-popup')">&times;</span>
                 <h2>SaSa</h2>
                 <p>
-                    A web platform that allows establishments to sell food at risk of being wasted at reduced
-                    prices,
+                    A web platform that allows establishments to sell food at risk of being wasted at reduced prices,
                     helping vendors generate revenue that would otherwise be lost.
                     My role in this project involved developing a significant portion of the front-end and handling
-                    communication between the database model and the website. Additionally, I created an AI model
-                    that
+                    communication between the database model and the website. Additionally, I created an AI model that
                     recommends food options based on the customer's cravings or recent visits.
                 </p>
                 <img src="static/Images/SaSa.png" alt="SaSa" class="popup-img">
@@ -245,15 +240,12 @@
                 <span class="close-btn" onclick="closePopup('sircComp-popup')">&times;</span>
                 <h2>SircComp</h2>
                 <p>
-                    SircComp is a powerful tool for compressing, decompressing, encrypting, and decrypting text
-                    files in
-                    Linux. It leverages LZW compression for efficient storage and Euler’s Theorem-based encryption
-                    for
+                    SircComp is a powerful tool for compressing, decompressing, encrypting, and decrypting text files in
+                    Linux. It leverages LZW compression for efficient storage and Euler’s Theorem-based encryption for
                     strong security.
 
                     Designed for cybersecurity-focused environments, SircComp ensures data integrity and protection
-                    while optimizing space. It offers both a command-line interface for advanced users and a simple
-                    GUI
+                    while optimizing space. It offers both a command-line interface for advanced users and a simple GUI
                     for accessibility, making secure file management both efficient and user-friendly.
                 </p>
                 <img src="static/Images/SircComp.png" alt="SircComp" class="popup-img">
@@ -264,18 +256,14 @@
                 <span class="close-btn" onclick="closePopup('asteroid-popup')">&times;</span>
                 <h2>Sirc Asteroid</h2>
                 <p>
-                    As the final project for the "Nand to Tetris" course, I recreated the classic Asteroids (1981)
-                    from
-                    the Atari 2600, programming it entirely in Jack, a minimalistic, high-level language designed
-                    for
+                    As the final project for the "Nand to Tetris" course, I recreated the classic Asteroids (1981) from
+                    the Atari 2600, programming it entirely in Jack, a minimalistic, high-level language designed for
                     educational purposes.
 
-                    The key challenge was implementing the game in 2.5D, simulating depth, distance, and visual
-                    effects
+                    The key challenge was implementing the game in 2.5D, simulating depth, distance, and visual effects
                     that are nearly impossible given the language’s strict limitations. This project highlights my
                     ability to work with low-level programming, build game engines from scratch, and optimize
-                    performance under highly constrained environments—essential skills for understanding how modern
-                    game
+                    performance under highly constrained environments—essential skills for understanding how modern game
                     engines and systems function at their core.
                 </p>
                 <img src="static/Images/Asteroid.png" alt="Sirc Asteroid" class="popup-img">
@@ -289,10 +277,8 @@
                     Dungeon Smash is a multi-level action game featuring an online level editor, allowing players to
                     create and share their own stages.
 
-                    I handled the entire development, from visual design and artwork to backend implementation. I
-                    also
-                    built a security and encryption system to protect user data from data miners. The game was
-                    developed
+                    I handled the entire development, from visual design and artwork to backend implementation. I also
+                    built a security and encryption system to protect user data from data miners. The game was developed
                     using Unity3D and MongoDB and was successfully released on Nintendo Switch and Steam.
                 </p>
                 <img src="static/Images/Dungeon.png" alt="Dungeon Smash" class="popup-img">
@@ -305,10 +291,8 @@
                 <p>
                     Unnamed Project is a narrative-driven exploration game inspired by The Stanley Parable, where
                     players navigate an abstract world filled with unexpected twists and branching paths. The game
-                    challenges perception, offering a non-linear storytelling experience where player decisions
-                    directly
-                    shape the outcome. It plays with concepts of free will, narrative control, and player agency,
-                    making
+                    challenges perception, offering a non-linear storytelling experience where player decisions directly
+                    shape the outcome. It plays with concepts of free will, narrative control, and player agency, making
                     each playthrough a unique experience.
                 </p>
                 <img src="static/Images/Unnamed.png" alt="Unnamed Project" class="popup-img">
@@ -319,16 +303,15 @@
                 <span class="close-btn" onclick="closePopup('pooh-popup')">&times;</span>
                 <h2>Honey Time! with Pooh!</h2>
                 <p>
-                    Honey Time! with Pooh! is a psychological horror game that reimagines Winnie the Pooh as a
-                    sinister
+                    Honey Time! with Pooh! is a psychological horror game that reimagines Winnie the Pooh as a sinister
                     antagonist, taking advantage of the character's public domain status. The game builds tension
-                    through atmospheric horror, unpredictable AI behavior, and environmental storytelling, creating
-                    an
+                    through atmospheric horror, unpredictable AI behavior, and environmental storytelling, creating an
                     experience that feels unsettling yet nostalgic.
                 </p>
                 <img src="static/Images/Pooh.png" alt="Honey Time! with Pooh!" class="popup-img">
             </div>
         </div>
+
     </section>
 
     <footer class="footer-section">
