@@ -14,7 +14,7 @@ function openPopup(id) {
     // move window to look at popupContent
     popupContent.scrollIntoView({ behavior: "smooth" });
     // Add popupcontent margin top so it moves a little from the top after scrollingIntoView
-    popupContent.style.marginTop = "10vh";
+    //popupContent.style.marginTop = "10vh";
 }
 
 // Close the popup and restore scrolling
