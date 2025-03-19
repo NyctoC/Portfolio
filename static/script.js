@@ -41,10 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-track");
 
     // Technologies you mentioned
+    //const techs = [
+    //    "fa-unity", "fa-microchip", "fa-react", "fa-js", "fa-python",
+    //    "fa-solid fa-c", "fa-react", "fa-node", 
+    //    "fa-aws", "fa-html5", "fa-css3"
+    //];
     const techs = [
-        "fa-unity", "fa-react", "fa-js", "fa-python",
-        "fa-solid fa-c", "fa-react", "fa-node", 
-        "fa-aws", "fa-html5", "fa-css3"
+        "fa-solid fa-brain", "fa-brands fa-unity", "fa-brands fa-react", "fa-brands fa-js",
+        "fa-brands fa-python", "fa-solid fa-c", "fa-brands fa-node", 
+        "fa-brands fa-aws", "fa-brands fa-html5", "fa-brands fa-css3"
     ];
 
     // Duplicate techs to make scrolling seamless
@@ -52,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     logos.forEach(tech => {
         const icon = document.createElement("i");
-        icon.className = `fab ${tech}`;
+        icon.className = `${tech}`;
         //icon.style.animation = "animation: fadeIn 1s ease-out, floating 6s cubic-bezier(1, 1, 1, 1) infinite;"
         track.appendChild(icon);
     });
