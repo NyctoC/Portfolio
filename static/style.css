@@ -50,9 +50,11 @@ header {
     background: rgba(16, 16, 15, 0);
 }
 
-header .logo {
+header .logo img {
     font-size: 24px;
     font-weight: bold;
+    width: 60px;
+    height: 60px;
     color: #7cdaa8;
     color: #4A90E2;
     /* That's gonna leave a Mark */
