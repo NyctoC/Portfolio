@@ -20,7 +20,7 @@ body::after {
     width: 100vw;
     height: 100vh;
     pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    background: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.3) 130%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.4) 120%);
     z-index: 9999; /* Ensure it's on top */
 }
 
@@ -165,13 +165,13 @@ nav a:hover {
 
 @media (max-width: 1024px) { /* Tablets */
     .hire-me {
-        font-size: 3.35vw;
+        font-size: 1.8vw;
     }
 }
 
 @media (max-width: 768px) { /* Mobile */
     .hire-me {
-        font-size: 5.35vw;
+        font-size: 1vh;
     }
 }
 
@@ -446,9 +446,27 @@ body.scrolling .projects {
     text-align: center;
     backdrop-filter: blur(8px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-out;
+    /* animation: fadeIn 1s ease-out, floating 6s cubic-bezier(1, 1, 1, 1) infinite; */
     margin-left: auto;
     margin-right: auto;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-3px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-3px) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
 .about-me-content {
@@ -464,7 +482,7 @@ body.scrolling .projects {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.3);
+    border: 4px solid rgba(96, 73, 234, 0.8);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     margin-bottom: 0px;
@@ -601,6 +619,8 @@ body.scrolling .projects {
     transform: translate(-50%, -50%);
     background: rgba(124, 218, 168, 0.1);
     background: rgba(74, 144, 226, 0.1);
+    /* That's gonna leave a Mark */
+    background: rgba(96, 73, 234, 0.2); /* Highlight color */
     border: 2px solid rgba(124, 218, 168, 0.4);
     border: 2px solid rgba(74, 144, 226, 0.4);
     backdrop-filter: blur(12px);
@@ -612,6 +632,7 @@ body.scrolling .projects {
     text-align: center;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(96, 73, 234, 0.3); /* Highlight color */
     animation: fadeIn 0s ease-in-out;
 }
 
@@ -675,8 +696,8 @@ footer {
     border-top: 2px solid rgba(217, 164, 65, 0.8);
     /* That's gonna leave a Mark */
     border-top: 2px solid rgba(96, 73, 234, 0.8);
-    padding: 50px 0px;
-    font-size: 16px;
+    padding: 35px 0px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -690,7 +711,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 /* Footer Info */
@@ -699,7 +720,7 @@ footer {
 }
 
 .footer-info h2 {
-    font-size: 24px;
+    font-size: 30px;
     color: #e95242;
     color: #D9A441;
     /* That's gonna leave a Mark */
@@ -707,9 +728,9 @@ footer {
 }
 
 .footer-info p {
-    font-size: 14px;
+    font-size: 16px;
     opacity: 1;
-    margin: 2px;
+    margin: 0px;
 }
 
 /* Footer Social Icons */
@@ -717,7 +738,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 .footer-socials a {
@@ -746,11 +767,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 1px;
 }
 
 .footer-emails p {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .footer-emails a {
@@ -791,6 +812,61 @@ footer {
     }
 }
 
+/* Tech Carousel */
+
+.tech-carousel {
+    position: relative;
+    width: 90%;
+    overflow: hidden;
+    margin-top: 80px; /* Space below the button */
+    white-space: nowrap;
+    /* Center in page */
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+@media (max-width: 950px) {
+    .tech-carousel {
+        margin-top: 40px; /* Reduce space on mobile */
+        flex-wrap: wrap; /* Make the icons be in 2 rows instead of 1 line */
+    }
+
+    .carousel-track {
+        justify-content: center; /* Center the rows */
+        gap: 20px; /* Adjust spacing for smaller screens */
+    }
+}
+
+.carousel-track {
+    display: flex;
+    gap: 40px; /* Space between logos */
+    animation: fadeIn 1s ease-out, floating 6s cubic-bezier(1, 1, 1, 1) infinite;
+    overflow: visible;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+}
+
+.carousel-track i {
+    font-size: 3.5vw; /* Adjust size as needed */
+    color: #ffffffa9; /* Use a color that fits your theme */
+}
+
+@media (max-width: 950px) {
+    .carousel-track i {
+        font-size: 5vw; /* Adjust size as needed */
+    }
+}
+
+/* Infinite scrolling animation */
+@keyframes scrollTechs {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 #starsCanvas {
     position: absolute;

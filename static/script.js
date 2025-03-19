@@ -37,6 +37,26 @@ function closePopup(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Logos
+    const track = document.querySelector(".carousel-track");
+
+    // Technologies you mentioned
+    const techs = [
+        "fa-unity", "fa-react", "fa-js", "fa-python",
+        "fa-solid fa-c", "fa-react", "fa-node", 
+        "fa-aws", "fa-html5", "fa-css3"
+    ];
+
+    // Duplicate techs to make scrolling seamless
+    const logos = [...techs];
+
+    logos.forEach(tech => {
+        const icon = document.createElement("i");
+        icon.className = `fab ${tech}`;
+        //icon.style.animation = "animation: fadeIn 1s ease-out, floating 6s cubic-bezier(1, 1, 1, 1) infinite;"
+        track.appendChild(icon);
+    });
+
     const viewProjectsBtn = document.getElementById("view-projects");
     const projectsSection = document.getElementById("projects");
     const body = document.body;
