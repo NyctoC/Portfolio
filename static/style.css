@@ -28,6 +28,9 @@ body::after {
     width: 100%; /* Ajustable según el diseño */
     height: 4px;
     background-color: #7CDAA8;
+    background-color: #4A90E2;
+    /* That's gonna leave a Mark */
+    background-color: #6049ea;
     margin: 0 auto 20px auto; /* Solo margen inferior */
     border-radius: 2px;
     opacity: 0.8;
@@ -51,6 +54,9 @@ header .logo {
     font-size: 24px;
     font-weight: bold;
     color: #7cdaa8;
+    color: #4A90E2;
+    /* That's gonna leave a Mark */
+    color: #6049ea;
     z-index: 0;
 }
 
@@ -106,6 +112,9 @@ nav a:hover {
 .intro h1 {
     margin: 0;
     color: #7cdaa8;
+    color: #4A90E2;
+    /* That's gonna leave a Mark */
+    color: #FFFFFF;
     position: relative;
     display: inline-block;
     font-size: 5vw;
@@ -126,6 +135,9 @@ nav a:hover {
 
 .intro h1 .highlight {
     color: #e95242;
+    color: #D9A441;
+    /* That's gonna leave a Mark */
+    color: #6049ea;
     position: relative;
     display: inline-block;
 }
@@ -133,12 +145,18 @@ nav a:hover {
 /* Hire Btn */
 .hire-me {
     background-color: #7cdaa8;
+    background-color: #4A90E2;
+    /* That's gonna leave a Mark */
+    background-color: rgba(16, 16, 15, 0.9);
+    
     color: #10101A;
+    /* That's gonna leave a Mark */
+    color: #FFFFFF;
     padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.35vw;
-    font-weight: bold;
+    border: 1px solid;
+    border-color: #ffffff;
+    border-radius: 5px;
+    font-size: 1vw;
     cursor: pointer;
     transition: 0.3s;
     margin-top: 20px;
@@ -159,13 +177,22 @@ nav a:hover {
 
 .hire-me:hover {
     background-color: #e95242;
+    background-color: #D9A441;
+    background-color: rgba(16, 16, 15, 0.9);
+    /* That's gonna leave a Mark */
+    /* Add box shadow with the new purple color */
+    box-shadow: 0 0 60px 0 rgba(96, 73, 234, 0.5);
     color: #10101A;
+    color: #FFFFFF;
     transform: scale(1.1);
 }
 
 /* Projects Section */
 .projects {
     border-top: 2px solid rgba(124, 218, 168, 0.8);
+    border-top: 2px solid rgba(74, 144, 226, 0.8);
+    /* That's gonna leave a Mark */
+    border-top: 2px solid rgba(96, 73, 234, 0.8);
     min-height: 100vh;
     background: #10101a00;
     background: rgba(16, 16, 15, 0.95);
@@ -197,6 +224,9 @@ nav a:hover {
     width: 80px;
     height: 4px;
     background-color: #7CDAA8; /* Accent color */
+    background-color: #4A90E2; /* Accent color */
+    /* That's gonna leave a Mark */
+    background-color: #6049ea; /* Accent color */
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -225,7 +255,13 @@ nav a:hover {
 .project-card {
     position: relative;
     background: rgba(124, 218, 168, 0.1); /* Fondo translúcido */
+    background: rgba(74, 144, 226, 0.1); /* Fondo translúcido */
+    /* That's gonna leave a Mark */
+    background: rgba(96, 73, 234, 0.9); /* Fondo translúcido */
     border: 2px solid rgba(124, 218, 168, 0.4);
+    border: 2px solid rgba(74, 144, 226, 0.4);
+    /* That's gonna leave a Mark */
+    border: 2px solid rgba(96, 73, 234, 0.4);
     backdrop-filter: blur(10px);
     color: #fff;
     padding: 20px;
@@ -271,7 +307,13 @@ nav a:hover {
 .project-card:hover {
     transform: translateY(-8px);
     border-color: rgba(124, 218, 168, 0.8);
+    border-color: rgba(74, 144, 226, 0.8);
+    /* That's gonna leave a Mark */
+    border-color: rgba(96, 73, 234, 0.8);
     box-shadow: 0px 15px 40px rgba(124, 218, 168, 0.3);
+    box-shadow: 0px 15px 40px rgba(74, 144, 226, 0.3);
+    /* That's gonna leave a Mark */
+    box-shadow: 0px 15px 40px rgba(96, 73, 234, 0.3);
 }
 
 /* Hover Glow Effect */
@@ -558,7 +600,9 @@ body.scrolling .projects {
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(124, 218, 168, 0.1);
+    background: rgba(74, 144, 226, 0.1);
     border: 2px solid rgba(124, 218, 168, 0.4);
+    border: 2px solid rgba(74, 144, 226, 0.4);
     backdrop-filter: blur(12px);
     color: #fff;
     padding: 20px;
@@ -628,6 +672,9 @@ footer {
 .footer-section {
     background-color: rgba(16, 16, 15, 0.95);
     border-top: 2px solid rgba(233, 82, 66, 0.8);
+    border-top: 2px solid rgba(217, 164, 65, 0.8);
+    /* That's gonna leave a Mark */
+    border-top: 2px solid rgba(96, 73, 234, 0.8);
     padding: 50px 0px;
     font-size: 16px;
     display: flex;
@@ -654,6 +701,9 @@ footer {
 .footer-info h2 {
     font-size: 24px;
     color: #e95242;
+    color: #D9A441;
+    /* That's gonna leave a Mark */
+    color: #6049ea;
 }
 
 .footer-info p {
@@ -672,6 +722,9 @@ footer {
 
 .footer-socials a {
     color: #e95242;
+    color: #D9A441;
+    /* That's gonna leave a Mark */
+    color: #6049ea;
     text-decoration: none;
     font-size: 22px;
     transition: color 0.3s, transform 0.3s;
@@ -682,6 +735,9 @@ footer {
 
 .footer-socials a:hover {
     color: #ff6655;
+    color: #FFC107;
+    /* That's gonna leave a Mark */
+    color: #FFFFFF;
     transform: scale(1.1);
 }
 
@@ -699,6 +755,9 @@ footer {
 
 .footer-emails a {
     color: #e95242;
+    color: #D9A441;
+    /* That's gonna leave a Mark */
+    color: #6049ea;
     text-decoration: none;
     font-weight: bold;
 }
