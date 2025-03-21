@@ -638,6 +638,14 @@ body.scrolling .projects {
     animation: fadeIn 0s ease-in-out;
 }
 
+.popup-video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
     .popup-content {
