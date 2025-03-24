@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.onresize = reportWindowSize;
 
-    rocketImg.src = "../static/Images/Rocket.png"; // Adjust path if needed
+    rocketImg.src = "../static/Images/Rocket.png";
 
     let angle = 0;
     let lastTime = performance.now(); // Track last frame time
