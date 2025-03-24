@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //    "fa-aws", "fa-html5", "fa-css3"
     //];
     const techs = [
-        "fa-brands fa-python", "fa-brands fa-unity", "fa-brands fa-react", "fa-brands fa-js",
+        "fa-brands fa-python", "fa-brands fa-unity", "fa-brands fa-react", "fa-solid fa-bolt-lightning", "fa-brands fa-js",
         "fa-solid fa-c", "fa-brands fa-node", 
         "fa-brands fa-aws", "fa-brands fa-html5", "fa-brands fa-css3"
     ];
