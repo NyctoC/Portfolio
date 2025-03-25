@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "fa-brands fa-aws", "fa-brands fa-html5", "fa-brands fa-css3"
     ];
 
+    
     // Duplicate techs to make scrolling seamless
     const logos = [...techs];
 
